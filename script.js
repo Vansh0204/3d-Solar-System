@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         planetControlDiv.className = 'planet-control';
         planetControlDiv.innerHTML = `
             <label for="${planet.name}-speed">${planet.name} Speed:</label>
-            <input type="range" id="${planet.name}-speed" min="0" max="50" value="${planet.orbitalSpeed * 100}" step="0.1">
+            <input type="range" id="${planet.name}-speed" min="0" max="50" value="${planet.orbitalSpeed * 50}" step="0.1">
         `;
         controlsContentDiv.appendChild(planetControlDiv); // Append to new controlsContentDiv
 
