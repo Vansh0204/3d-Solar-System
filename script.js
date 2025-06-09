@@ -105,7 +105,7 @@ const planets = [
 
 // Add moon data to specific planets
 planets.find(p => p.name === 'Earth').moons = [
-    { name: 'The Moon', size: 0.5, distance: 8, orbitalSpeed: 0.05, texture: 'images/moon_texture.jpg', description: `Earth's only permanent natural satellite.` } // You'll need to provide moon_texture.jpg
+    { name: 'The Moon', size: 0.5, distance: 8, orbitalSpeed: 0.05, texture: 'images/Moon_texture.jpg', description: `Earth's only permanent natural satellite.` } // You'll need to provide moon_texture.jpg
 ];
 
 planets.find(p => p.name === 'Jupiter').moons = [
