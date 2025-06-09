@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize theme button text
-    themeToggleBtn.textContent = 'Switch to Light Theme';
+    themeToggleBtn.textContent = 'Switch to Dark Theme';
 
     // Event Listeners (now using named functions defined globally)
     window.addEventListener('mousemove', onMouseMove);
