@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System 3D Simulation</title>
+    <link rel="icon" href="ss.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <h1>Solar System 3D Simulation</h1>
+    <button id="pauseResumeBtn">Pause Animation</button>
+    <button id="themeToggleBtn">Switch to Dark Theme</button>
+
+    <div id="controls-dropdown" class="controls-dropdown">
+        <button id="toggle-controls-btn" class="toggle-controls-btn">Planet Speed Controls</button>
+        <div id="controls-content" class="controls-content">
+            <!-- Planet speed sliders will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <div id="tooltip" style="position: absolute; display: none; background: rgba(0,0,0,0.7); color: white; padding: 5px; border-radius: 3px; font-size: 14px; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Information Panel -->
+    <div id="info-panel" class="info-panel">
+        <h2></h2>
+        <p class="size"></p>
+        <p class="distance"></p>
+        <p class="orbital-speed"></p>
+        <p class="description"></p>
+        <button id="close-info-panel">X</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html> 
