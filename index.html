@@ -3,24 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System 3D Simulation</title>
+
+    <!-- Improved Page Title -->
+    <title>Solar System 3D Simulation | Interactive Model</title>
+
     <link rel="icon" href="ss.jpg" type="image/jpg">
     <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
-<body>
-    <h1>Solar System 3D Simulation</h1>
-    <button id="pauseResumeBtn">Pause Animation</button>
-    <button id="themeToggleBtn">Switch to Light Theme</button>
 
+<body>
+    <!-- Main Heading -->
+    <h1>Solar System 3D Interactive Simulation</h1>
+
+    <!-- Control Buttons -->
+    <button id="pauseResumeBtn" aria-label="Pause or Resume Animation">
+        Pause Animation
+    </button>
+
+    <button id="themeToggleBtn" aria-label="Toggle Theme">
+        Switch to Light Theme
+    </button>
+
+    <!-- Planet Speed Controls -->
     <div id="controls-dropdown" class="controls-dropdown">
-        <button id="toggle-controls-btn" class="toggle-controls-btn">Planet Speed Controls</button>
+        <button id="toggle-controls-btn" class="toggle-controls-btn">
+            Planet Speed Controls
+        </button>
+
         <div id="controls-content" class="controls-content">
-            <!-- Planet speed sliders will be injected here by JavaScript -->
+            <!-- Planet speed sliders injected dynamically -->
         </div>
     </div>
 
-    <div id="tooltip" style="position: absolute; display: none; background: rgba(0,0,0,0.7); color: white; padding: 5px; border-radius: 3px; font-size: 14px; pointer-events: none; z-index: 100;"></div>
+    <!-- Tooltip (Improved Styling & Readability) -->
+    <div id="tooltip"
+         style="position: absolute;
+                display: none;
+                background: rgba(0, 0, 0, 0.75);
+                color: white;
+                padding: 6px;
+                border-radius: 4px;
+                font-size: 14px;
+                pointer-events: none;
+                z-index: 100;">
+    </div>
 
     <!-- Information Panel -->
     <div id="info-panel" class="info-panel">
@@ -29,9 +58,14 @@
         <p class="distance"></p>
         <p class="orbital-speed"></p>
         <p class="description"></p>
-        <button id="close-info-panel">X</button>
+
+        <!-- Improved Close Button -->
+        <button id="close-info-panel" aria-label="Close Information Panel">
+            ✕
+        </button>
     </div>
 
+    <!-- Main Script -->
     <script type="module" src="script.js"></script>
 </body>
-</html> 
+</html>
