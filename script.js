@@ -200,19 +200,21 @@ function animate(currentTime) {
 
     const deltaTime = (currentTime - lastTime) / 1000;
     lastTime = currentTime;
+    const SUN_ROTATION_SPEED = 0.002;
 
     // Sun rotation
-    sun.rotation.y += 0.002;
+    sun.rotation.y += SUN_ROTATION_SPEED;
 
 
     // Planet orbits and self-rotation
 
 
     planets.forEach(planet => {
+        const PLANET_ROTATION_SPEED = 0.01;
         const mesh = planetMeshes[planet.name];
         mesh.position.x = Math.cos(currentTime * 0.001 * planet.orbitalSpeed) * planet.distance;
         mesh.position.z = Math.sin(currentTime * 0.001 * planet.orbitalSpeed) * planet.distance;
-        mesh.rotation.y += 0.01; // Basic self-rotation
+        mesh.rotation.y += PLANET_ROTATION_SPEED; // Basic self-rotation
 
         // Animate moons around their parent planet
         if (planet.moons && mesh) {
@@ -419,6 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setAnimationLoop(() => {
+            orbitControls.update();
+        });
     });
 
     // Update orbit controls in animation loop
